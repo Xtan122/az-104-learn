@@ -25,7 +25,7 @@ mkdir -p sample && for i in $(seq 1 20); do echo "file $i" > sample/file$i.txt; 
 azcopy login --identity 2>/dev/null || azcopy login   # hoặc dùng SAS bên dưới
 # Cách chắc chắn nhất trong lab: dùng SAS
 SAS=$(az storage container generate-sas --account-name $ST -n data \
-  --permissions acdlrw --expiry 2026-12-01 --auth-mode login --as-user -o tsv)
+  --permissions acdlrw --expiry 2026-12-01 --auth-mode login --as-user -o tsv | sed 's/^?//')
 azcopy copy './sample/*' "https://$ST.blob.core.windows.net/data/?$SAS" --recursive
 azcopy list "https://$ST.blob.core.windows.net/data/?$SAS"
 ```
@@ -115,7 +115,7 @@ az storage container policy create --account-name $ST -n data \
   --auth-mode key --account-key "$KEY"
 
 SAS2=$(az storage blob generate-sas --account-name $ST -c data -n file1.txt \
-  --policy-name readonly --account-key "$KEY" -o tsv)
+  --policy-name readonly --account-key "$KEY" -o tsv | sed 's/^?//')
 
 curl -s -o /dev/null -w "before revoke: %{http_code}\n" \
   "https://$ST.blob.core.windows.net/data/file1.txt?$SAS2"

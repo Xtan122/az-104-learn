@@ -15,6 +15,7 @@ az group create -n $RG -l southeastasia
 ```bash
 az appservice plan create -g $RG -n plan-lab --sku S1 --is-linux
 az webapp create -g $RG -p plan-lab -n $APP --runtime "PHP:8.2"
+# Nếu runtime không còn hỗ trợ: az webapp list-runtimes --os linux | grep -i php
 az webapp show -g $RG -n $APP --query "{host:defaultHostName,state:state}" -o json
 ```
 

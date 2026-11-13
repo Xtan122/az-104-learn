@@ -70,7 +70,7 @@ az group delete -n $RG --yes
 # Đổi sang ReadOnly → thử sửa tag
 az lock delete -n no-delete --resource-group $RG
 az lock create -n readonly --lock-type ReadOnly --resource-group $RG
-az group update -n $RG --set tags.x=1
+az group update -n $RG --tags x=1
 # Kỳ vọng: fail vì ReadOnly
 az lock delete -n readonly --resource-group $RG
 ```
