@@ -1,0 +1,28 @@
+# Azure CLI / credentials
+.azure/
+*.pem
+*.pub
+!**/README.md
+
+# Deploy artifacts
+*.zip
+.output/
+bin/
+obj/
+node_modules/
+
+# Local env
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Lab dumps
+*.har
+captures/
