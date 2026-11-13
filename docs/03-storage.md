@@ -135,8 +135,7 @@
   - **Entra Kerberos** cho hybrid user (cần Entra Connect + device/AD).
   - Không dùng được "Entra ID thuần" cho SMB ACL theo kiểu AD.
 - **Snapshot** (share-level, read-only), **soft delete** (retention 1–365 ngày), **previous versions**.
-- **Azure File Sync**: agent trên Windows Server, **sync group** (cloud endpoint + server endpoints), **cloud tiering** (file cũ để lại cloud, giữ stub), cần 1 server làm "primary"? Không — mọi server ngang hàng nhưng cần 1 server endpoint là primary cho new namespace? (không cần nhớ).
-- Giới hạn: 100 TB/share (standard), 5 TiB file? Không cần nhớ con số — nhớ "share lớn hơn blob container".
+- **Azure File Sync**: agent trên Windows Server, **sync group** (cloud endpoint + server endpoints), **cloud tiering** (file cũ để lại cloud, giữ stub).
 
 ## 6. Blob features khác (nhớ 1 dòng mỗi cái)
 
@@ -168,7 +167,7 @@
 
 1. GRS: **không đọc** secondary. RA-GRS mới đọc được.
 2. Archive: phải **rehydrate**, không đọc ngay.
-3. Contributer account ≠ đọc blob → cần data-plane role.
+3. Contributor trên account ≠ đọc blob → cần data-plane role.
 4. SAS revoke = stored access policy, không phải xoá blob.
 5. User delegation SAS max **7 ngày**, chỉ blob.
 6. Storage firewall "Selected networks" cần **service endpoint** trên subnet, trừ khi dùng private endpoint.

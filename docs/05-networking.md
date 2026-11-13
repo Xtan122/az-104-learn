@@ -18,7 +18,7 @@
 → `/24` = **251** usable; `/28` = **11**; `/29` = **3** (subnet nhỏ nhất Azure cho phép là `/29`).
 
 - Subnet cần cho dịch vụ đặc biệt:
-  - `GatewaySubnet` (VPN/ER) — **đúng tên này**, /27 hoặc lớn hơn.
+  - `GatewaySubnet` (VPN/ER) — **đúng tên này**, tối thiểu /29, khuyến nghị /27.
   - `AzureBastionSubnet` — **đúng tên này**, /26 hoặc lớn hơn.
   - `AzureFirewallSubnet`, `AzureFirewallManagementSubnet`.
   - App Service VNet integration: subnet delegation `Microsoft.Web/serverFarms`.

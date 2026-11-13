@@ -24,7 +24,7 @@ for u in alice bob carol; do
     --display-name "$u az104" \
     --user-principal-name "$u-az104@<TENANT>.onmicrosoft.com" \
     --password 'Az104!LabPassw0rd' \
-    --force-change-password-next-sign-in true
+    --force-change-password-next-login true
 done
 
 az ad group member add -g grp-az104-ops --member-id $(az ad user show --id alice-az104@<TENANT>.onmicrosoft.com --query id -o tsv)

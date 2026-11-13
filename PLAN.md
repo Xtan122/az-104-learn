@@ -27,6 +27,8 @@ Nguyên tắc: **mỗi ngày phải có ít nhất 1 artifact** (cheat sheet, CL
 
 **Chốt ngày:** bạn phải trả lời được không cần nhìn: *Contributor khác Owner ở đâu? Guest khác Member ở đâu? Gán role ở subscription thì resource group có quyền gì?*
 
+- [ ] Hoàn thành Ngày 1 (quiz ≥ 80%, đã ghi 3 domain yếu)
+
 ## Ngày 2 — Chủ Nhật 15/11 (6h): RBAC + Governance
 
 | Giờ | Việc | Output |
@@ -38,6 +40,8 @@ Nguyên tắc: **mỗi ngày phải có ít nhất 1 artifact** (cheat sheet, CL
 | 16:15–17:00 | `[Q]` 20 câu Identity & Governance (q1 + câu tự tạo từ sổ lỗi) | ≥ 16/20 |
 
 **Chốt ngày:** phân biệt được 4 câu: *ai được làm (RBAC) · được tạo gì (Policy) · có được xoá không (Lock) · tốn bao nhiêu (Budget)*.
+
+- [ ] Hoàn thành Ngày 2 (quiz 20 câu ≥ 80%, cheat sheet viết tay)
 
 ## Ngày 3 — Thứ Hai 16/11 (3,5h): Networking 1 — VNet, NSG, Bastion
 
@@ -91,6 +95,8 @@ Nguyên tắc: **mỗi ngày phải có ít nhất 1 artifact** (cheat sheet, CL
 
 **Must-know:** availability set (99,95%, FD/UD) vs zone (99,99%). Temp disk mất dữ liệu khi deallocate/resize. `az deployment group create`.
 
+- [ ] Hoàn thành Ngày 8 (quiz Compute ≥ 80%, template deploy thành công)
+
 ## Ngày 9 — Chủ Nhật 22/11 (6h): Compute 2 + Monitor intro
 
 | Giờ | Việc | Output |
@@ -99,6 +105,8 @@ Nguyên tắc: **mỗi ngày phải có ít nhất 1 artifact** (cheat sheet, CL
 | 10:15–12:15 | `[P]` **Lab 9** — web app + staging slot + swap; ACI từ image public | `labs/lab-09-appservice-containers.md` |
 | 14:30–15:30 | `[L]` Metrics vs logs, diagnostic settings, Log Analytics cơ bản | `docs/06` mục 1–3 |
 | 15:30–17:00 | `[Q]` 15 câu Compute + 5 câu Monitor + sổ lỗi | ≥ 80% |
+
+- [ ] Hoàn thành Ngày 9 (slot swap chạy được, quiz ≥ 80%)
 
 ## Ngày 10 — Thứ Hai 23/11 (3,5h): Monitor + Backup/DR
 
