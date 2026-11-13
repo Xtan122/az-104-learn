@@ -1,5 +1,7 @@
 # AZ-104 Learning
 
+> **Mới vào repo? Đọc [`START-HERE.md`](START-HERE.md) trước (10 phút)** — hướng dẫn thứ tự đọc file và cách dùng từng phần.
+
 > Mục tiêu: **pass AZ-104 (≥ 700/1000)** ngày 28/11/2026.
 > Xuất phát điểm: **có AWS SAA, chưa từng học Azure**. Quỹ thời gian: **~59 giờ** (10 buổi tối × 3,5h + 4 ngày cuối tuần × 6h).
 
