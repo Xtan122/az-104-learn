@@ -7,8 +7,8 @@ count_file() {
   local f="$1"
   [[ -f "$f" ]] || { echo "0 0"; return; }
   local done total
-  done=$(grep -c -- '^- \[[xX]\]' "$f" 2>/dev/null || true)
-  total=$(grep -c -- '^- \[[ xX]\]' "$f" 2>/dev/null || true)
+  done=$(grep -cE '^- \[[xX]\]|[|][[:space:]]*\[[xX]\][[:space:]]*[|]' "$f" 2>/dev/null || true)
+  total=$(grep -cE '^- \[[ xX]\]|[|][[:space:]]*\[[ xX]\][[:space:]]*[|]' "$f" 2>/dev/null || true)
   echo "${done:-0} ${total:-0}"
 }
 

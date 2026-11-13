@@ -12,6 +12,7 @@ az group create -n $RG -l southeastasia
 ```
 
 > Nếu tenant của bạn không cho tạo user (account cá nhân), dùng tenant mặc định của free account — vẫn tạo được. Nếu bị chặn, ghi lại lỗi và chuyển sang phần RBAC với user hiện có.
+> **Thay `<TENANT>`** bằng tên tenant của bạn: `az account show --query tenantDefaultDomain -o tsv` (thường dạng `tencongty.onmicrosoft.com`).
 
 ## Bước 1 — Tạo group và 3 user
 
